@@ -1,0 +1,231 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+
+  background-color: hsl(0, 0%, 100%);
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+
+  gap: 3rem;
+}
+
+.card .input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+}
+
+.input .label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+
+.label-wrapper label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+}
+
+.label-wrapper .error-msg {
+  font-weight: 700;
+  font-size: 1.5rem;
+  opacity: 0;
+  color: indianred;
+}
+
+.label-wrapper .show-error-msg {
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.input .inp-text {
+  width: 100%;
+  padding: 0.5rem 2.4rem;
+
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-size: 2.4rem;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 0.5rem;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+}
+
+.inp-text:focus-within {
+  outline: none;
+  border: 2px solid hsl(172, 67%, 45%);
+}
+
+.inp-text.show-error-msg:focus-within {
+  border: 1px solid indianred;
+}
+
+.input .inp-wrapper {
+  position: relative;
+}
+
+.inp-wrapper img {
+  position: absolute;
+  left: 2.4rem;
+  top: 1.5rem;
+}
+
+.input .btn-wrapper {
+  padding-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 1.5rem;
+}
+
+.btn-wrapper .btn {
+  width: 45%;
+  padding: 0.6rem 0;
+
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  border-radius: 0.5rem;
+
+  transition: all 0.5s ease;
+}
+
+.btn-wrapper .btn:hover {
+  background-color: rgb(159, 232, 223);
+}
+
+.btn-wrapper .btn-active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.btn-wrapper .inp-text {
+  width: 45%;
+}
+
+.card .calc-output {
+  width: 100%;
+  padding: 2.2rem;
+  border-radius: 1.5rem;
+  background-color: hsl(183, 100%, 15%);
+}
+
+.container-calc-output .line-output {
+  margin: 1.4rem 0 2.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.line-output .title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white;
+}
+
+.line-output .description {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: hsl(184, 14%, 56%);
+}
+
+.line-output .val {
+  font-weight: 700;
+  font-size: 3rem;
+
+  color: hsl(172, 67%, 45%);
+}
+
+.calc-output .btn {
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 8.4rem;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+
+  background-color: hsl(172, 67%, 45%);
+  border-radius: 0.5rem;
+  color: hsl(183, 100%, 15%);
+
+  transition: all 0.5s ease;
+}
+
+.output .btn:hover {
+  background-color: rgb(159, 232, 223);
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    width: 64%;
+    padding: 3.4rem;
+    flex-direction: row;
+    align-items: stretch;
+    border-radius: 2.5rem;
+    gap: 1.5rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05),
+      0px 20px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .card .input {
+    width: 105%;
+    padding: 0 3.5rem 1.5rem 1.5rem;
+  }
+
+  .input .label-wrapper {
+    padding: 1rem 0;
+  }
+
+  .input .btn-wrapper .btn {
+    width: 30.5%;
+    font-size: 2rem;
+  }
+
+  .input .btn-wrapper .inp-text {
+    width: 30.5%;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .card .output {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+
+  .container-calc-output .line-output {
+    margin: 0.5rem 0 2.4rem 0;
+  }
+
+  .line-output .val {
+    font-size: 4.6rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  padding-top: 32px;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
